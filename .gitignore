@@ -1,6 +1,4 @@
-from gtts import gTTS
-
-text = "Hello. world! I am a certified python developer. I can help you with your coding problems and provide solutions in Python."
-tts = gTTS(text=text, lang='en')
-tts.save("C:/Users/YourName/Desktop/voice.mp3")
-print("Audio file saved as voice.mp3")smp-tracker/
+smp-tracker/
+api-dashboard/
+data-analysis-report/
+output.txt
