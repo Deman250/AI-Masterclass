@@ -1,17 +1,18 @@
 #Connecting JS to Python backend
 print("\n ===== CONNECTING JAVASCRIPT TO PYTHON BACKEND =======")
-Week 8 • Day 39
+"""
+#Week 8 • Day 39
 Connecting JS to a Python Backend
 JavaScript runs in the browser. Python runs on a server. A REST API is the contract between them. JavaScript sends requests; Python processes and responds.
 
 Week 8 Progress
-Day 39 of 50
+#Day 39 of 50
 The Architecture
 Definition: Full-stack
-A full-stack application has a front end (what the user sees in the browser) and a back end (logic and data running on a server). JavaScript handles the front end. Python handles the back end. They communicate via HTTP using JSON.
+# A full-stack application has a front end (what the user sees in the browser) and a back end (logic and data running on a server). JavaScript handles the front end. Python handles the back end. They communicate via HTTP using JSON.
 Browser (JS)   --fetch()-->   Python API (FastAPI / Flask)   --query-->   Database (Supabase / SQLite)
 Database   --data-->   Python API   --JSON-->   Browser (JS updates DOM)
-Request flows left to right. Response flows right to left. JSON is the data format in both directions.
+# Request flows left to right. Response flows right to left. JSON is the data format in both directions.
 
 Known example: A phone repair shop with a front counter (JavaScript) and a back workshop (Python). The customer never enters the workshop. The counter staff (JS) takes the request, passes it through a window to the workshop (Python), and brings back the result. JSON is the paper slip they write the order and response on.
 Building the Python Side (FastAPI)
@@ -250,6 +251,7 @@ console.log("Message:", response.CustomerMessage);
 
  Run Code
 Output will appear here.
-← Day 38: Fetch API
+# Day 38: Fetch API
 Week 8: JavaScript
-Day 40: Mini Project →
+#Day 40: Mini Project 
+"""

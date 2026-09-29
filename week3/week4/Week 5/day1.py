@@ -16,12 +16,19 @@
 
 import json
 import requests
-#API - to fetch temperature of a city
-city_name = input("Enter city name: ")
-api_key = '409bf2685494c84529105b1a367e42ec'
+import os
+from dotenv import load_dotenv
 
-#Building API URL
+load_dotenv()  # .env is in the same folder as this script, so no path needed
+
+city_name = input("Enter city name: ")
+api_key = os.environ.get("OPENWEATHER_API_KEY")
+
 api_url = f'https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={api_key}&units=metric'
 get_server_response = requests.get(api_url)
-data= get_server_response.json()
-print(f"City: {data['name']}, Temperature: {data['main']['temp']}°C, Weather: {data['weather'][0]['description']}")
+data = get_server_response.json()
+
+if data.get("cod") != 200:
+    print(f"Error: {data.get('message', 'City not found')}")
+else:
+    print(f"City: {data['name']}, Temperature: {data['main']['temp']}°C, Weather: {data['weather'][0]['description']}")
